@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
 		StringBuffer body =new StringBuffer("");
 		body.append("temporary pwd :"+ tempPwd);
 		body.append("<br/>");
-		body.append("<a href=\"unlock?email="+to+"\">clickhere to unlock<a>");
+		body.append("<a href=\"http://localhost:8080/unlock?email="+to+"\">click here to unlock <a>");
 		emailutils.sendEmails(to,subject,body.toString());
 		
 		return true;

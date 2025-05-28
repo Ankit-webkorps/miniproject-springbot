@@ -19,7 +19,7 @@ public class UserDtlsEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer userId;
 
-	private String username;
+	private String name;
 
 	private String email;
 	private String pwd;
@@ -34,12 +34,12 @@ public class UserDtlsEntity {
 		this.userId = userId;
 	}
 
-	public String getUsername() {
-		return username;
+	public String getname() {
+		return name;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setname(String name) {
+		this.name = name;
 	}
 
 	public String getEmail() {

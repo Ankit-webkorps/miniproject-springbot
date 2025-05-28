@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import in.ashokit.binding.SignUpForm;
@@ -15,14 +16,12 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping("/signup")
-	private String handleSignUp(SignUpForm form,Model model)
+	private String handleSignUp(@ModelAttribute("user") SignUpForm form,Model model)
    {
 	   
 	   boolean status =userService.signup(form);
 	   if(status) {
-		   
-		   model.addAttribute("succMsg","check your mail");
-		   
+		   model.addAttribute("succMsg","check your mail");		   
 	   }
 	   else {
 		   model.addAttribute("errmsg","problem occured");

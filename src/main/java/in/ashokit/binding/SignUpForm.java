@@ -4,7 +4,7 @@ public class SignUpForm {
 
 	private String name;
 	private String email;
-	private String phno;
+	private Long phno;
 	public String getName() {
 		return name;
 	}
@@ -17,12 +17,13 @@ public class SignUpForm {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPhno() {
+	public Long getPhno() {
 		return phno;
 	}
-	public void setPhno(String phno) {
+	public void setPhno(Long phno) {
 		this.phno = phno;
 	}
+	
 	
 	
 	

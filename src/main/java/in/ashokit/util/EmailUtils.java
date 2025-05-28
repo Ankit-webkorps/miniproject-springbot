@@ -22,6 +22,7 @@ public class EmailUtils {
 			helper.setTo(to);
 			helper.setSubject(subject);
 			helper.setText(body,true);
+			 mailSender.send(mimeMessage);
 			issent=true;
 		}
 		catch(Exception e) {
