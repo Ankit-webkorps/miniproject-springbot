@@ -23,6 +23,9 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private EmailUtils emailutils;
 	
+	
+	
+	
 	@Override
 	public String Login(LoginForm form) {
 		
@@ -31,6 +34,8 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean signup(SignUpForm form) {
+		UserDtlsEntity user = UserDtlsRepo.findByEmail(form.getEmail());
+		
 		
 		UserDtlsEntity entity=new UserDtlsEntity();
 		BeanUtils.copyProperties(form,entity);
